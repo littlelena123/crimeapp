@@ -4,7 +4,7 @@ COMP7705 Project - Crime Prediction Platform
 1. Clone the crimeapp
 
 ```sh
-git clone https://github.com/Shivppatel/PGC-Crime-Map.git
+git clone git@github.com:littlelena123/crimeapp.git
 ```
 
 2. Install NPM packages
