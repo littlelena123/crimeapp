@@ -20,7 +20,6 @@ height: 85vh;
 
 `;
 
-
 export const StatisticsTitle = styled.h1`
   color: white;
   margin-bottom: 24px;
@@ -31,3 +30,31 @@ export const StatisticsTitle = styled.h1`
   }
 `;
 
+export const Button = styled.button`
+  margin-top: 14px;
+  border-radius: 50px;
+  background: #a3c2f0;
+  color: #17263c;
+  white-space: nowrap;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #17263c;
+    color: white;
+  }
+`;
+
+export const DashImage = styled.img`
+  min-width: 300px;
+  border-radius: 10px;
+  width: 40vw;
+  align-items: center;
+  object-fit: contain;
+  @media screen and (max-width: 1080px) {
+    width: 50vw;
+  }
+`;
