@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
-
+import { NavLink as LinkS } from "react-router-dom";
+import { NavLink as LinkA } from "react-router-dom";
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? "#17263c" : "transparent")};
+background: #17263c;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -26,17 +26,7 @@ export const NavbarContainer = styled.div`
   padding: 0 24px;
   max-width: 1100px;
 `;
-export const NavLogo = styled(LinkR)`
-  color: white;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
-  font-weight: bold;
-  text-decoration: none;
-`;
+
 
 export const MobileIcon = styled.div`
   display: none;
@@ -58,15 +48,50 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
-
+  text-decoration: none;
   @media screen and (max-width: 760px) {
     display: none;
   }
 `;
 export const NavItem = styled.li`
   height: 80px;
+	text-decoration: none;
+  
+`;
+export const NavLogo = styled(LinkR)`
+  color: white;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  
 `;
 export const NavLinks = styled(LinkS)`
+color: white;
+display: flex;
+align-items: center;
+margin-top:1rem;
+padding: 0 1rem;
+font-size: 1.0rem;
+height: 100%;
+cursor: pointer;
+
+text-decoration: none;
+&:hover {
+  color: #a3c2f0;
+}
+  &.active {
+    border-bottom: 3px solid #a3c2f0;
+  }
+  text-decoration: none;
+`;
+export const NavLinksA = styled(LinkA)`
+margin-top:1rem;
+font-size: 1.0rem;
   color: white;
   display: flex;
   align-items: center;
@@ -75,10 +100,11 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid #a3c2f0;
+	text-decoration: none;
+  &:hover {
+    color: #a3c2f0;
   }
 `;
-export const Abbr = styled.abbr`
+export const p = styled.p`
   text-decoration: none;
 `;

@@ -17,37 +17,59 @@ const Sidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink
-            to="home"
+            to="/"
             onClick={toggle}
             smooth={true}
             duration={500}
             spy={true}
             exact="true"
-            offset={-80}
+            //offset={-80}
           >
             Home
           </SidebarLink>
           <SidebarLink
-            to="about"
+            to="/about"
             onClick={toggle}
             smooth={true}
             duration={500}
             spy={true}
             exact="true"
-            offset={-80}
+            //offset={-80}
           >
             About
           </SidebarLink>
           <SidebarLink
-            to="map"
+            to="/map"
             onClick={toggle}
             smooth={true}
             duration={500}
             spy={true}
             exact="true"
-            offset={-80}
+            //offset={-80}
           >
             Crime Map
+          </SidebarLink>
+          <SidebarLink
+            to="/statistics"
+            onClick={toggle}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            //offset={-80}
+          >
+            Statistics
+          </SidebarLink>
+          <SidebarLink
+            to="/subscribe"
+            onClick={toggle}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            //offset={-40}
+          >
+            Subscribe
           </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>

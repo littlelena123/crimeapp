@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
+import { Link as LinkS } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   height: 100px;
@@ -9,7 +9,7 @@ export const FooterContainer = styled.div`
   text-align: center;
   justify-content: center;
   padding: 20px;
-  color: #dae0e2;
+  color: white;
   font-size: 1rem;
 `;
 
@@ -26,12 +26,13 @@ export const FooterLinkTitle = styled.p`
 `;
 
 export const FooterLink = styled(LinkS)`
+color: white;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 10px 10px;
   cursor: pointer;
-
+  
   &:hover {
     color: #a3c2f0;
   }

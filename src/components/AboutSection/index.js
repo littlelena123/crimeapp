@@ -15,7 +15,7 @@ import Picture from "../../images/image1.svg";
 const About = () => {
   return (
     <AboutContainer id="about">
-      <AboutTitle>About Crime Prediction Platform</AboutTitle>
+      
       <AboutWrapper>
         <AboutContent>
           <ContentItem>

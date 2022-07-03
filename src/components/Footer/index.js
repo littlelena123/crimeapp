@@ -10,7 +10,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterLinksWrapper>
         <FooterLink
-          to="home"
+          to="/"
           smooth={true}
           duration={500}
           spy={true}
@@ -20,7 +20,7 @@ const Footer = () => {
           Home
         </FooterLink>
         <FooterLink
-          to="about"
+          to="/about"
           smooth={true}
           duration={500}
           spy={true}
@@ -30,7 +30,7 @@ const Footer = () => {
           About
         </FooterLink>
         <FooterLink
-          to="map"
+          to="/map"
           smooth={true}
           duration={500}
           spy={true}
@@ -40,14 +40,24 @@ const Footer = () => {
           Crime Map
         </FooterLink>
         <FooterLink
-          to="home"
+          to="/statistics"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-80}
         >
-          Login/Registration
+          Statistics
+        </FooterLink>
+        <FooterLink
+          to="/subscribe"
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          Subscribe
         </FooterLink>
       </FooterLinksWrapper>
       <FooterLinkTitle>© 2022 COMP7705 Project Crime Prediction Platform</FooterLinkTitle>

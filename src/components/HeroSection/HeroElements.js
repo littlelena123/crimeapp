@@ -86,24 +86,10 @@ export const HeroP = styled.p`
   }
 `;
 
-export const HeroPer = styled.p`
-  margin-top: 5px;
-  margin-left: 30px;
-  color: #fff;
-  font-size: 14px;
-  text-align:left;
-  max-width: 600px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 14x;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 14px;
-  }
-`;
 
 export const HeroBtnWrapper = styled.div`
-  margin-top: 32px;
+  margin-top: 222px;
   display: flex;
   flex-direction: column;
   align-items: center;

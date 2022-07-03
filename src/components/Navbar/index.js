@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaBars } from "react-icons/fa";
-import { animateScroll as scroll } from "react-scroll";
+
 import {
   Nav,
   NavbarContainer,
@@ -9,74 +9,65 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  Abbr,
+  NavLinksA
 } from "./NavbarElements";
-
+import HeroSection from '../HeroSection';
+import StatisticsSection from '../StatisticsSection';
+import AboutSection from '../AboutSection';
+import Signup from '../User/signup/Signup';
+import { Switch, Route } from 'react-router-dom';
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false);
 
-  const changeNav = () => {
-    if (window.scrollY >= 80) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNav);
-  }, []);
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
   return (
     <>
-      <Nav scrollNav={scrollNav}>
+
+      <Nav>
         <NavbarContainer>
-          <NavLogo to="/" onClick={toggleHome}>
+          <NavLogo to="/" >
           Crime Prediction Platform
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
+
             <NavItem>
-              <NavLinks onClick={toggleHome}>
-                <Abbr title="Home">Home</Abbr>
+              <NavLinksA to="/" >
+                <p title="Home">Home</p>
+              </NavLinksA>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/about">
+                <p title="About">About</p>
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="about"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                <Abbr title="About">About</Abbr>
+              <NavLinks to="/map">
+                <p title="Crime Map">Crime Map</p>
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="map"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                <Abbr title="Crime Map">Crime Map</Abbr>
+              <NavLinks to="/statistics">
+                <p title="Statistics">Statistics</p>
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks onClick={toggleHome}>
-                <Abbr title="Home">Login/Registration</Abbr>
+              <NavLinks to="/subscribe">
+                <p title="Subscribe">Subscribe</p>
               </NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
       </Nav>
+      <Route>
+                <Switch>
+                    <Route exact path='/' component={HeroSection}></Route>
+                    <Route exact path='/about' component={AboutSection}></Route>
+                    <Route exact path='/statistics' component={StatisticsSection}></Route>
+                    <Route exact path='/subscribe' component={Signup}></Route>
+                </Switch>
+        </Route>
+ 
     </>
   );
 };
